@@ -1,0 +1,26 @@
+<app-shared></app-shared>
+<div class="pull-right">
+  <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-print"></span>&nbsp; EXPORT</button>
+</div>
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Priority</th>
+      <th>Status</th>
+      <th>Date Created</th>
+      <th [attr.colspan]="2">Testing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td [attr.rowspan]="rowspanValue">Rohman</td>
+      <td [attr.rowspan]="rowspanValue">Teknik Informatik</td>
+      <td>Ciamis </td>
+      <td>01 Januari 2019</td>
+    </tr>
+    <tr>
+      <td>jakarta</td>
+      <td>02 Januari 2019</td>
+    </tr>
+  </tbody>
+</table>
