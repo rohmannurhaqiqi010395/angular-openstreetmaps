@@ -8,6 +8,7 @@ import { LeafletsComponent } from './leaflets/leaflets.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { SharedComponent } from './shared/shared.component';
 import { PdfComponent } from './pdf/pdf.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PdfComponent } from './pdf/pdf.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LeafletModule.forRoot()
+    LeafletModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,40 +1,46 @@
 <app-shared></app-shared>
-<div class="pull-right">
-  <button type="button" class="btn btn-danger" (click)="generatePdf()"><span class="glyphicon glyphicon-print"></span>&nbsp; EXPORT</button>
+<div class="container" style="padding: 20px;">
+  <div *ngIf="chart">
+    <canvas id="canvas">{{ chart }}</canvas>
+  </div>
+
+  <div class="pull-right">
+    <button type="button" class="btn btn-danger" (click)="generatePdf()"><span class="glyphicon glyphicon-print"></span>&nbsp; EXPORT</button>
+  </div>
+  <table class="table table-striped table-bordered" id="contenToConvert">
+    <thead>
+      <tr>
+        <th [attr.rowspan]="2">Date</th>
+        <th [attr.rowspan]="2">Biilling Name</th>
+        <th [attr.rowspan]="2">Saving</th>
+        <th [attr.rowspan]="2">Panel</th>
+        <th [attr.colspan]="3">Incoming</th>
+        <th [attr.colspan]="3">Outgoing</th>
+      </tr>
+      <tr>
+        <th>Device ID</th>
+        <th>Incoming Time</th>
+        <th>kWh</th>
+        <th>Device ID</th>
+        <th>Incoming Time</th>
+        <th>kWh</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td [attr.rowspan]="rowspanValue">Rohman</td>
+        <td [attr.rowspan]="rowspanValue">Teknik Informatika</td>
+        <td [attr.rowspan]="rowspanValue">Teknik Informatika</td>
+        <td [attr.rowspan]="rowspanValue">Teknik Informatika</td>
+      </tr>
+      <tr>
+        <td>jakarta</td>
+        <td>02 Januari 2019</td>
+        <td>jakarta</td>
+        <td>02 Januari 2019</td>
+        <td>jakarta</td>
+        <td>02 Januari 2019</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-<table id="contenToConvert" class="table table-striped table-bordered">
-  <thead>
-    <tr>
-      <th [attr.rowspan]="2">Date</th>
-      <th [attr.rowspan]="2">Biilling Name</th>
-      <th [attr.rowspan]="2">Saving</th>
-      <th [attr.rowspan]="2">Panel</th>
-      <th [attr.colspan]="3">Incoming</th>
-      <th [attr.colspan]="3">Outgoing</th>
-    </tr>
-    <tr>
-      <th>Device ID</th>
-      <th>Incoming Time</th>
-      <th>kWh</th>
-      <th>Device ID</th>
-      <th>Incoming Time</th>
-      <th>kWh</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td [attr.rowspan]="rowspanValue">Rohman</td>
-      <td [attr.rowspan]="rowspanValue">Teknik Informatika</td>
-      <td [attr.rowspan]="rowspanValue">Teknik Informatika</td>
-      <td [attr.rowspan]="rowspanValue">Teknik Informatika</td>
-    </tr>
-    <tr>
-      <td>jakarta</td>
-      <td>02 Januari 2019</td>
-      <td>jakarta</td>
-      <td>02 Januari 2019</td>
-      <td>jakarta</td>
-      <td>02 Januari 2019</td>
-    </tr>
-  </tbody>
-</table>
