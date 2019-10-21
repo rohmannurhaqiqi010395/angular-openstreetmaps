@@ -27,6 +27,8 @@ const routes: Routes = [
     path: 'pdf',
     component: PdfComponent
   }
+
+
 ];
 
 @NgModule({
